@@ -19,7 +19,7 @@ int tstSco4 = Convert.ToInt32(Console.ReadLine());
 
 int tstScoSum = tstSco1 + tstSco2 + tstSco3 + tstSco4;
 
-int tstScoAve = tstScoSum / 4;
+float tstScoAve = (float)tstScoSum / 4;
 
 //and then display it back to them
 Console.WriteLine("The average of these four test scores is {0}", tstScoAve);
