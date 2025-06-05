@@ -15,7 +15,6 @@ namespace Lab_3
         {
             int randomNum = randGenerator.Next(1, 4);
 
-
             int rock = 1;
             int paper = 2;
             int scissors = 3;
@@ -28,17 +27,15 @@ namespace Lab_3
             else if (randomNum == 2)
             {
                 lblCompPicked.Text = "paper";
-                compScore += 1; //addition instead of concatenation
+                compScore += 1;
                 lblCompScore.Text = compScore.ToString();
             }
             else
             {
                 lblCompPicked.Text = "scissors";
-                playerScore += 1; //addition instead of concatenation
+                playerScore += 1;
                 lblPlayerScore.Text = playerScore.ToString();
             }
-
-           
 
             if (lblPlayerScore.Text == "3")
             {
@@ -56,7 +53,6 @@ namespace Lab_3
 
         private void btnPaper_Click(object sender, EventArgs e)
         {
-            Random randGenerator = new Random();
             int randomNum = randGenerator.Next(1, 4);
 
             int rock = 1;
@@ -66,6 +62,8 @@ namespace Lab_3
             if (randomNum == 1)
             {
                 lblCompPicked.Text = "rock";
+                playerScore += 1;
+                lblPlayerScore.Text = playerScore.ToString();
             }
             else if (randomNum == 2)
             {
@@ -74,37 +72,23 @@ namespace Lab_3
             else
             {
                 lblCompPicked.Text = "scissors";
+                compScore += 1;
+                lblCompScore.Text = compScore.ToString();
             }
 
-            if (randomNum == 1)
+            if (lblPlayerScore.Text == "3")
             {
-                lblPlayerScore.Text += 1;
-                lblCompScore.Text += 0;
+                lblResult.Text = "Player Wins!!!";
             }
-            else if (randomNum == 2)
+            else if (lblCompScore.Text == "3")
             {
-                lblPlayerScore.Text += 0;
-                lblCompScore.Text += 0;
+                lblResult.Text = "Computer Wins";
             }
             else
             {
-                lblPlayerScore.Text += 0;
-                lblCompScore.Text += 1;
+                lblResult.Text = "";
             }
-
-            //if (lblPlayerScore.Text = 3)
-            //{
-            //    lblResult.Text = "Player Wins!!!";
-            //}
-            //else if (lblCompScore.Text = 3)
-            //{
-            //    lblResult.Text = "Computer Wins";
-            //}
-            //else
-            //{
-            //    lblResult.Text = "";
-            //}
-        }
+            }
 
         private void btnScissors_Click(object sender, EventArgs e)
         {
@@ -118,45 +102,33 @@ namespace Lab_3
             if (randomNum == 1)
             {
                 lblCompPicked.Text = "rock";
+                compScore += 1;
+                lblCompScore.Text = compScore.ToString();
             }
             else if (randomNum == 2)
             {
                 lblCompPicked.Text = "paper";
+                playerScore += 1;
+                lblPlayerScore.Text = playerScore.ToString();
             }
             else
             {
                 lblCompPicked.Text = "scissors";
             }
 
-            if (randomNum == 1)
+            if (lblPlayerScore.Text == "3")
             {
-                lblPlayerScore.Text += 0; //String Concatenation - meaning adding strings together
-                lblCompScore.Text += 1;
+                lblResult.Text = "Player Wins!!!";
             }
-            else if (randomNum == 2)
+            else if (lblCompScore.Text == "3")
             {
-                lblPlayerScore.Text += 1;
-                lblCompScore.Text += 0;
+                lblResult.Text = "Computer Wins";
             }
             else
             {
-                lblPlayerScore.Text += 0;
-                lblCompScore.Text += 0;
+                lblResult.Text = "";
             }
-
-            //if (lblPlayerScore.Text = 3)
-            //{
-            //    lblResult.Text = "Player Wins!!!";
-            //}
-            //else if (lblCompScore.Text = 3)
-            //{
-            //    lblResult.Text = "Computer Wins";
-            //}
-            //else
-            //{
-            //    lblResult.Text = "";
-            //}
-        }
+            }
 
         private void lblCompPicked_Click(object sender, EventArgs e)
         {
