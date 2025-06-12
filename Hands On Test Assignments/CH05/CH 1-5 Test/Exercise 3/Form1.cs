@@ -23,8 +23,13 @@ namespace Exercise_3
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
             //USER INPUT
-            double length = Convert.ToDouble(txtLength.Text);
-            double width = Convert.ToDouble(txtWidth.Text);
+            string enteredLength = txtLength.Text;
+            int length;
+            int.TryParse(enteredLength, out length);
+
+            string enteredWidth = txtWidth.Text;
+            int width;
+            int.TryParse(enteredWidth, out width);
 
             //AREA
             double area = length * width;

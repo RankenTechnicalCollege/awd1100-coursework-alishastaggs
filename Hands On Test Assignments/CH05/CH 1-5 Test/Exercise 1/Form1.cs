@@ -16,25 +16,30 @@ namespace Exercise_1
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            double inches = Convert.ToDouble(txtInches.Text);
+            string enteredInches = txtInches.Text;
+
+            double inches;
+
+            double.TryParse(enteredInches, out inches);
 
             double result = inches * cmPerIn;
 
-            //error msg (I thought this would have worked with charcters but I can not figure out how to do that.)
-            //(this is my best shot at error handling)
-
-            if (inches <= 9999999999999999999)
-            {
-                lblResult.Text = Convert.ToString($"{inches} inches is {result} centimeters");
-            }
-
-            else
+            if (inches <= 0)
             {
                 lblResult.Text = "Please enter a positive number";
+            }
+            else
+            {
+                    lblResult.Text = Convert.ToString($"{inches} inches is {result} centimeters");
             }
         }
 
         private void lblResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

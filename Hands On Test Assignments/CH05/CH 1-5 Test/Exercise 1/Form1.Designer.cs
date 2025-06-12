@@ -42,6 +42,7 @@
             label1.Size = new Size(102, 15);
             label1.TabIndex = 0;
             label1.Text = "Distance in inches";
+            label1.Click += label1_Click;
             // 
             // lblResult
             // 

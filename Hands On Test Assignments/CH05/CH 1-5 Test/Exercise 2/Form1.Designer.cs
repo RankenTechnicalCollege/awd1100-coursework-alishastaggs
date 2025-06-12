@@ -43,6 +43,7 @@
             label1.Size = new Size(87, 15);
             label1.TabIndex = 0;
             label1.Text = "Numeric Grade";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
