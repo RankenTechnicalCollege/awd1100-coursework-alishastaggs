@@ -49,6 +49,7 @@
             label1.Size = new Size(137, 15);
             label1.TabIndex = 0;
             label1.Text = "How much was the sale?";
+            label1.Click += label1_Click;
             // 
             // label2
             // 

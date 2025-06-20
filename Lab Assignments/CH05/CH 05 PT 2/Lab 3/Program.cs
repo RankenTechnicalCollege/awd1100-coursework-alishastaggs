@@ -48,3 +48,11 @@
         Console.WriteLine($"Danielle sales: {dSum:C}");
         Console.WriteLine($"Edward sales: {eSum:C}");
         Console.WriteLine($"Francis sales: {fSum:C}");
+        Console.WriteLine($"Grand Total: {dSum + eSum + fSum}");
+
+if (dSum > eSum && dSum > fSum)
+    Console.WriteLine($"Danielle had the most sales");
+else if (eSum > dSum && eSum > fSum)
+    Console.WriteLine("Edward had the most sales");
+else
+    Console.WriteLine("Francis had the most sales");
