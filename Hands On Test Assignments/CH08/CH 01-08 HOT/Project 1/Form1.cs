@@ -27,6 +27,7 @@ namespace CH_01_08_HOT
                 lblFirstName.Text = firstName[i];
                 lblLastName.Text = lastName[i];
                 lblPhoneNumber.Text = phoneNum[i];
+                    lblInvalid.Text = " ";
                 found = true;
                     break;
                 }
